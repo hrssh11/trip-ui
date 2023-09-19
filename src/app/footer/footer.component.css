@@ -1,0 +1,13 @@
+footer{
+    background-color: navy;
+    color: white;
+    height: 10%;
+}
+
+div {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2%;
+  font-size: large;
+}

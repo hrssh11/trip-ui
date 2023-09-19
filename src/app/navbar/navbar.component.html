@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle();">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <h1>Brand Name</h1>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+       <mat-nav-list>
+            <a mat-list-item>Home</a>
+            <a mat-list-item>Trips</a>
+            <a mat-list-item>LOgin</a>
+       </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height:80vh;">
+            <router-outlet>
+            </router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<app-home></app-home>
