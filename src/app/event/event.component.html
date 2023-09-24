@@ -1,45 +1,22 @@
-
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-3">
-   
-             harsh
-
+<div class="bg">
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <div mousehoverstyle class="col-3 custom-border mt-3" *ngFor="let trip of tripHeader">
+    
+                 <div  class="image-container mt-3">
+                    <img src="{{trip.img}}" alt="SomethingWent Wrong">
+                 </div>
+    
+                 <div class="mt-1">
+                    <h2 class="triptitle"> {{trip.titleheading}}</h2>
+                 </div>
+    
+                 <div class="detail">
+                    <p>Price Per Person &nbsp; ₹{{trip.from}}  &nbsp; {{trip.life}}  </p>
+                 </div>
+    
+            </div>
         </div>
-        <div class="col-3">
-   
-            harsh
-
-       </div>
-       <div class="col-3">
-   
-        harsh
-
-   </div>
-   <div class="col-3">
-   
-    harsh
-
-</div>
-<div class="col-3">
-   
-    harsh
-
-</div>
-<div class="col-3">
-   
-    harsh
-
-</div>
-<div class="col-3">
-   
-    harsh
-
-</div>
-<div class="col-3">
-   
-    harsh
-
-</div>
     </div>
+    
 </div>

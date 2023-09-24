@@ -23,11 +23,8 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(window.location)
     let currentpath = window.location.pathname.substring(1)
-    console.log(currentpath)
     this.isEventClick(currentpath)
-
   }
   isEventClick(event) {
     switch (event) {

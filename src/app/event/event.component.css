@@ -1,0 +1,29 @@
+.image-container img {
+    width: 100%;
+     height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.col-3 {
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.triptitle{
+    margin-bottom: 0px;
+    color: #e07e17;
+}
+.container-fluid{
+    width: 100%;
+       overflow-x: auto;
+       height: 726px;
+}
+.bg{
+background-color: black;
+}

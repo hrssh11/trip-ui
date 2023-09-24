@@ -31,6 +31,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventComponent } from './event/event.component';
 import { AboutComponent } from './about/about.component';
+import { MouseHoverEffect } from './customDirective/mouseHoverEffect.directive';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AboutComponent } from './about/about.component';
     NavbarComponent,
     FooterComponent,
     EventComponent,
-    AboutComponent
+    AboutComponent,
+    MouseHoverEffect
   ],
   imports: [
     BrowserModule,
