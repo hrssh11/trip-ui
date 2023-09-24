@@ -2,16 +2,15 @@
     <mat-sidenav-container class="sidenav-container">
       <mat-sidenav #sidenav mode="over" class="sidenav" position="end">
         <ul>
-          <li><a routerLink="/">Home</a></li>
-          <li><a routerLink="/event">Event</a></li>
-          <li><a routerLink="/about">About</a></li>
-          <li><a routerLink="/contact">Contact</a></li>
-          <li><a routerLink="/login">Login</a></li>
+          <li><a routerLink="/"(click)="isEventClick($event)" value="home">Home</a></li>
+          <li><a routerLink="/event" (click)="isEventClick($event)" value="event">Event</a></li>
+          <li><a routerLink="/contact" (click)="isEventClick($event)" value="contact">Contact</a></li>
+          <li><a routerLink="/login" (click)="isEventClick($event)" value="login">Login</a></li>
         </ul>
       </mat-sidenav>
-  
-      <mat-sidenav-content class="content">
-        <mat-toolbar class="bg">
+   
+      <mat-sidenav-content class="content" >
+        <mat-toolbar class="bg-home" *ngIf="isHome">
           <mat-toolbar-row>
             <h1>WayJoy</h1>
             <div class="custom-button">
@@ -22,7 +21,20 @@
           </mat-toolbar-row>
         </mat-toolbar>
   
-        <router-outlet></router-outlet>
+        <mat-toolbar  class="bg-event" *ngIf="isEvent">
+          <mat-toolbar-row>
+            <h1>WayJoy</h1>
+            <div class="custom-button">
+              <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon style="color: aliceblue;">menu</mat-icon>
+              </button>
+            </div>
+          </mat-toolbar-row>
+        </mat-toolbar>
+        <div class="container-fluid">
+          <router-outlet></router-outlet>
+        </div>
+     
       </mat-sidenav-content>
     </mat-sidenav-container>
   </div>
