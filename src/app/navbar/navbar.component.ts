@@ -1,47 +1,55 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { CommonserviceService } from '../home/commonService/commonservice.service';
-import { switchScan } from 'rxjs';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
 
   isHome: boolean = true;
   isEvent: boolean = false
   isContact: boolean = false
   isLogin: boolean = false
 
-  constructor(public commonService: CommonserviceService) {
+  constructor(
+    public commonService: CommonserviceService,
+    private router: Router,
+    private route: ActivatedRoute ,) {
 
   }
 
+  ngOnInit() {
+    console.log(window.location)
+    let currentpath = window.location.pathname.substring(1)
+    console.log(currentpath)
+    this.isEventClick(currentpath)
+
+  }
   isEventClick(event) {
-
-    let typeEvent = event.target.innerHTML
-
-    switch (typeEvent) {
-      case 'Home':
+    switch (event) {
+      case 'home':
         this.isHome = true;
         this.isContact = false;
         this.isLogin = false;
         this.isEvent = false;
         break;
-      case 'Event':
+      case 'event':
         this.isEvent = true;
         this.isHome = false;
         this.isContact = false;
         this.isLogin = false;
         break;
-      case 'Contact':
+      case 'contact':
         this.isContact = true;
         this.isHome = false;
         this.isEvent = false;
         this.isLogin = false;
         break;
-      case 'Login':
+      case 'login':
         this.isLogin = true;
         this.isHome = false;
         this.isEvent = false;
@@ -50,7 +58,4 @@ export class NavbarComponent {
     }
 
   }
-
-
-
 }
