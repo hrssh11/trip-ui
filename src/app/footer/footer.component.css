@@ -1,0 +1,30 @@
+.content{
+    height: 200px;
+    background-color: black;
+    color: white;
+}
+
+
+
+h1 {
+    font-family: cursive !important;
+    font-size: xx-large !important;
+    color: aliceblue;
+    font-weight: revert !important;
+  }
+  
+  .mat-icon {
+    font-size: 15px;
+    height: 20px ;
+    width: 20px;
+    padding-top: 6px;
+}
+
+.botm{
+    padding-left: 7%;
+}
+
+h4{
+    color: orangered;
+}
+  

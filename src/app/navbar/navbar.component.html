@@ -1,12 +1,20 @@
 <div class="main-container">
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #sidenav mode="over" class="sidenav" position="end">
+      <div class="sidenav-header">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
       <ul>
-        <li><a routerLink="/" (click)="isEventClick('home')" value="home">Home</a></li>
-        <li><a routerLink="/event" (click)="isEventClick('event')" value="event">Event</a></li>
-        <li><a routerLink="/contact" (click)="isEventClick('contact')" value="contact">Contact</a></li>
-        <li><a routerLink="/login" (click)="isEventClick('login')" value="login">Login</a></li>
+        <li><a routerLink="/" (click)="isEventClick('home')" value="home"><mat-icon>home</mat-icon> Home</a></li>
+        <li><a routerLink="/event" (click)="isEventClick('event')" value="event"><mat-icon>landscape</mat-icon> Event</a></li>
+        <li><a routerLink="/contact" (click)="isEventClick('contact')" value="contact"><mat-icon>phone</mat-icon> Contact</a></li>
+        <li><a routerLink="/login" (click)="isEventClick('login')" value="login"><mat-icon>person</mat-icon> Login</a></li>
       </ul>
+      <br><br><br><br><br><br><br><br>
+      <hr>
+      <app-contact></app-contact>
     </mat-sidenav>
 
     <mat-sidenav-content class="content">
@@ -33,6 +41,7 @@
       </mat-toolbar>
       <div class="container-fluid">
         <router-outlet></router-outlet>
+        <app-footer></app-footer>
       </div>
 
     </mat-sidenav-content>

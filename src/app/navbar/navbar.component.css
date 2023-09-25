@@ -6,16 +6,16 @@
   background-position: top center;
   background-repeat: no-repeat;
 }
-
 .bg-event {
   width: 100% !important;
   height: 15% !important;
-  /* background: url('/src/assets/images/event.png') no-repeat center; */
-  background-color: rgb(224, 126, 22);
-  background-size: 100% 100% ;
-  background-position: top center ;
-  background-repeat: no-repeat !important;
+  background-image: url('../../assets/images/event.png');
+  /* background-color: rgb(224, 126, 22); */
+  background-size: 100% 100%;
+  background-position: center top; 
+  background-repeat: no-repeat;
 }
+
 
 .bg-contact {
   width: 100%;
@@ -53,8 +53,8 @@ h1 {
 
 .sidenav {
   width: 250px;
-  background-color: white;
-  color: red;
+  background-color: rgb(118, 35, 35);
+  color: white;
   padding: 20px;
 }
 
@@ -74,9 +74,20 @@ li {
 a {
   text-decoration: none;
   font-size: large;
-  color: #c8675c;
+  color: white;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+.mat-icon{
+  padding-top: 2px;
+  padding-right: 30px;
+}
+
+.sidenav-header {
+  display: flex;
+  justify-content: end;
+  color: gray;
 }
