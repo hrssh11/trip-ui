@@ -1,22 +1,24 @@
-<div class="bg">
-    <div class="container-fluid">
-        <div class="row d-flex justify-content-center">
-            <div mousehoverstyle class="col-3 custom-border mt-3" *ngFor="let trip of tripHeader">
+    <div class="bg">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+                <div mousehoverstyle class="col-3 custom-border mt-3" *ngFor="let trip of tripHeader">
+                    <!-- <a [routerLink]="['/event-detail']"> -->
+                    <a (click)="onNavigateEvent(trip)">
+                    <div class="image-container mt-3">
+                        <img src="{{trip.img}}" alt="SomethingWent Wrong">
+                    </div>
     
-                 <div  class="image-container mt-3">
-                    <img src="{{trip.img}}" alt="SomethingWent Wrong">
-                 </div>
+                    <div class="mt-1">
+                        <h2 class="triptitle"> {{trip.titleheading}}</h2>
+                    </div>
     
-                 <div class="mt-1">
-                    <h2 class="triptitle"> {{trip.titleheading}}</h2>
-                 </div>
-    
-                 <div class="detail">
-                    <p>Price Per Person &nbsp; ₹{{trip.from}}  &nbsp; {{trip.life}}  </p>
-                 </div>
-    
+                    <div class="detail">
+                        <p>Price Per Person &nbsp; ₹{{trip.from}} &nbsp; {{trip.life}} </p>
+                    </div>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
     
-</div>
+    </div>
+

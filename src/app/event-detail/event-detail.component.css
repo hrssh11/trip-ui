@@ -1,0 +1,43 @@
+.duration {
+    display: flex;
+    padding-right: 40px;
+    padding-left: 20px;
+}
+
+.material-icons {
+    padding-top: 10px;
+    color: rebeccapurple;
+}
+
+.content {
+    display: flex;
+}
+
+.container p {
+    padding-left: 20px;
+}
+
+.container_2 {
+    width: 400px;
+}
+
+.c1 {
+    margin-top: 20px;
+    display: flex;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.example-card {
+    max-width: 400px;
+}
+
+.btn {
+    background-color: rebeccapurple;
+    color: white;
+    width: 250px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 auto;
+    border-radius: 30px;
+}

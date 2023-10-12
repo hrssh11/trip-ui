@@ -14,7 +14,10 @@
       </ul>
       <br><br><br><br><br><br><br><br>
       <hr>
-      <app-contact></app-contact>
+      <h4>Contact</h4>
+      <p>WayJoy, Visat Gandhinagar, Ahmedabad, Gujarat 380009</p>
+      <p><mat-icon>phone</mat-icon> +91 91047 93940</p>
+      <p><mat-icon>phone</mat-icon> +91 98930 14524</p>
     </mat-sidenav>
 
     <mat-sidenav-content class="content">
@@ -39,7 +42,19 @@
           </div>
         </mat-toolbar-row>
       </mat-toolbar>
-      <div class="container-fluid">
+
+      <mat-toolbar class="bg-contact" *ngIf="isContact">
+        <mat-toolbar-row>
+          <h1>WayJoy</h1>
+          <div class="custom-button">
+            <button mat-icon-button (click)="sidenav.toggle()">
+              <mat-icon style="color: aliceblue;">menu</mat-icon>
+            </button>
+          </div>
+        </mat-toolbar-row>
+      </mat-toolbar>
+
+      <div>
         <router-outlet></router-outlet>
         <app-footer></app-footer>
       </div>

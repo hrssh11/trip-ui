@@ -32,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventComponent } from './event/event.component';
 import { AboutComponent } from './about/about.component';
 import { MouseHoverEffect } from './customDirective/mouseHoverEffect.directive';
+import { EventDetailComponent } from './event-detail/event-detail.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MouseHoverEffect } from './customDirective/mouseHoverEffect.directive';
     FooterComponent,
     EventComponent,
     AboutComponent,
-    MouseHoverEffect
+    MouseHoverEffect,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,

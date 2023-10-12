@@ -19,6 +19,14 @@
     margin-bottom: 0px;
     color: #e07e17;
 }
+
+a{
+    text-decoration: none;
+}
+
+p{
+    color: black;
+}
 /* .container-fluid{
     width: 100%;
        overflow-x: auto;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 export class TripHeaderModel {
   id: number;
@@ -6,6 +7,7 @@ export class TripHeaderModel {
   titleheading: string;
   from: string;
   life: string;
+
 }
 
 @Component({
@@ -14,6 +16,7 @@ export class TripHeaderModel {
   styleUrls: ['./event.component.css']
 })
 export class EventComponent {
+    constructor(private router: Router) { }
 
   tripHeader: TripHeaderModel[] = [
     {
@@ -102,7 +105,11 @@ export class EventComponent {
     }
   ]
 
-
+  onNavigateEvent(tripDetail : TripHeaderModel)
+  {
+    console.log(tripDetail);
+    this.router.navigateByUrl("/event-detail")
+  }
 
 
 }

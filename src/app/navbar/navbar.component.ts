@@ -11,9 +11,10 @@ import { ActivatedRoute } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   isHome: boolean = true;
-  isEvent: boolean = false
-  isContact: boolean = false
-  isLogin: boolean = false
+  isEvent: boolean = false;
+  isContact: boolean = false;
+  isLogin: boolean = false;
+  isEventDetail: boolean = false;
 
   constructor(
     public commonService: CommonserviceService,
@@ -33,8 +34,17 @@ export class NavbarComponent implements OnInit {
         this.isContact = false;
         this.isLogin = false;
         this.isEvent = false;
+        this.isEventDetail = false;
         break;
       case 'event':
+        this.isEvent = true;
+        this.isHome = false;
+        this.isContact = false;
+        this.isLogin = false;
+        this.isEventDetail = false;
+        break;
+      case 'event-detail':
+        this.isEventDetail = true;
         this.isEvent = true;
         this.isHome = false;
         this.isContact = false;
@@ -45,12 +55,14 @@ export class NavbarComponent implements OnInit {
         this.isHome = false;
         this.isEvent = false;
         this.isLogin = false;
+        this.isEventDetail = false;
         break;
       case 'login':
         this.isLogin = true;
         this.isHome = false;
         this.isEvent = false;
         this.isContact = false;
+        this.isEventDetail = false;
         break;
     }
 

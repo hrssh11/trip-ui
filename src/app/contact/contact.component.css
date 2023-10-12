@@ -5,10 +5,9 @@
     padding-top: 6px;
 }
 
-/* h4{
-    color: orangered;
-} */
-
-/* p{
-    color: white;
-} */
+.example-card {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}

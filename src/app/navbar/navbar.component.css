@@ -1,7 +1,7 @@
 .bg-home {
   width: 100%;
   height: 70%;
-  background: url('https://img.invinciblengo.org/iconscout/f:jpeg/w:2000/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/961a8d9.jpg') no-repeat center;
+  background: url('https://plus.unsplash.com/premium_photo-1661902184762-49c2c8ebb787?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2016&q=80') no-repeat center;
   background-size: 100% 100%;
   background-position: top center;
   background-repeat: no-repeat;
@@ -9,8 +9,8 @@
 .bg-event {
   width: 100% !important;
   height: 15% !important;
-  background-image: url('../../assets/images/event.png');
-  /* background-color: rgb(224, 126, 22); */
+  /* background-image: url('../../assets/images/event.png'); */
+  background-color: rebeccapurple;
   background-size: 100% 100%;
   background-position: center top; 
   background-repeat: no-repeat;
@@ -18,11 +18,12 @@
 
 
 .bg-contact {
-  width: 100%;
-  height: 70%;
-  background: url('https://img.invinciblengo.org/iconscout/f:jpeg/w:2000/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/961a8d9.jpg') no-repeat center;
+  width: 100% !important;
+  height: 15% !important;
+  /* background-image: url('../../assets/images/event.png'); */
+  background-color: rebeccapurple;
   background-size: 100% 100%;
-  background-position: top center;
+  background-position: center top; 
   background-repeat: no-repeat;
 }
 
@@ -53,8 +54,9 @@ h1 {
 
 .sidenav {
   width: 250px;
-  background-color: rgb(118, 35, 35);
-  color: white;
+  background-color: white;
+  /* background: url('https://w0.peakpx.com/wallpaper/175/701/HD-wallpaper-dark-mountain.jpg') no-repeat center; */
+  color: rebeccapurple;
   padding: 20px;
 }
 
@@ -74,7 +76,7 @@ li {
 a {
   text-decoration: none;
   font-size: large;
-  color: white;
+  color: rebeccapurple;
 }
 
 a:hover {
