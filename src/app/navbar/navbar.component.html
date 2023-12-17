@@ -25,7 +25,7 @@
         <mat-toolbar-row>
           <h1 class="heading">WayJoy</h1>
           <div class="custom-button">
-            <button style="position: absolute; right: 0;" mat-icon-button (click)="sidenav.toggle()">
+            <button class="menu-button-res" mat-icon-button (click)="sidenav.toggle()">
               <mat-icon style="color: aliceblue;">menu</mat-icon>
             </button>
           </div>
@@ -34,9 +34,9 @@
 
       <mat-toolbar style="position: fixed;top: 0;" class="bg-event" *ngIf="isEvent">
         <mat-toolbar-row>
-          <h1>WayJoy</h1>
+          <h1 class="heading">WayJoy</h1>
           <div class="custom-button">
-            <button mat-icon-button (click)="sidenav.toggle()">
+            <button class="menu-button-res" mat-icon-button (click)="sidenav.toggle()">
               <mat-icon style="color: aliceblue;">menu</mat-icon>
             </button>
           </div>
@@ -45,9 +45,9 @@
 
       <mat-toolbar class="bg-contact" *ngIf="isContact">
         <mat-toolbar-row>
-          <h1>WayJoy</h1>
+          <h1 class="heading">WayJoy</h1>
           <div class="custom-button">
-            <button mat-icon-button (click)="sidenav.toggle()">
+            <button class="menu-button-res" mat-icon-button (click)="sidenav.toggle()">
               <mat-icon style="color: aliceblue;">menu</mat-icon>
             </button>
           </div>
