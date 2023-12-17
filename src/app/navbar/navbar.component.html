@@ -23,16 +23,16 @@
     <mat-sidenav-content class="content">
       <mat-toolbar class="bg-home" *ngIf="isHome">
         <mat-toolbar-row>
-          <h1>WayJoy</h1>
+          <h1 class="heading">WayJoy</h1>
           <div class="custom-button">
-            <button mat-icon-button (click)="sidenav.toggle()">
+            <button style="position: absolute; right: 0;" mat-icon-button (click)="sidenav.toggle()">
               <mat-icon style="color: aliceblue;">menu</mat-icon>
             </button>
           </div>
         </mat-toolbar-row>
       </mat-toolbar>
 
-      <mat-toolbar class="bg-event" *ngIf="isEvent">
+      <mat-toolbar style="position: fixed;top: 0;" class="bg-event" *ngIf="isEvent">
         <mat-toolbar-row>
           <h1>WayJoy</h1>
           <div class="custom-button">

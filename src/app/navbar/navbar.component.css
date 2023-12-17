@@ -93,3 +93,17 @@ a:hover {
   justify-content: end;
   color: gray;
 }
+
+
+@media (max-width: 600px) {
+  /* Styles specific to small screens go here */
+  .heading {
+    /* Your responsive styles for small screens */
+    /* For example: */
+    position: absolute;
+    left: -105px;
+    top: 2px;
+}
+   
+  
+}
