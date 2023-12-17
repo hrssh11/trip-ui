@@ -27,11 +27,13 @@ a{
 p{
     color: black;
 }
-/* .container-fluid{
-    width: 100%;
-       overflow-x: auto;
-       height: 726px;
-} */
-/* .bg{
-background-color: black;
-} */
+.event-content{
+    margin-top: 12% !important; 
+    height: 700px;
+    overflow: auto;
+    background: #fff;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+    margin-top: 16px;
+    margin-bottom: 37px;
+    border-radius: 31px;
+}
