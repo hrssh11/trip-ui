@@ -1,0 +1,24 @@
+.home-content{
+    height: 600px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+    margin-top: 16px;
+    margin-bottom: 37px;
+    border-radius: 31px;
+}
+
+.recent-search{
+    padding-top: 17px;
+    display: flex;
+    justify-content: center;
+}
+
+.trending-plan{
+    font-weight: 100;
+    border-radius: 1px 53px 9px 35px;
+    padding: 17px;
+    background: #23a7a2;;
+    color: white;
+    font-weight: 100;
+}
