@@ -58,6 +58,11 @@ h1 {
   /* background: url('https://w0.peakpx.com/wallpaper/175/701/HD-wallpaper-dark-mountain.jpg') no-repeat center; */
   color: rebeccapurple;
   padding: 20px;
+  top: 15%;
+  bottom: 6%;
+  right: 2%;
+  border-radius: 17px !important;
+  background: honeydew;
 }
 
 /* Style your sidebar items as needed */
@@ -94,6 +99,13 @@ a:hover {
   color: gray;
 }
 
+ :host ::ng-deep  .mat-drawer-inner-container {
+
+  height: 100%;
+  overflow: visible;
+  -webkit-overflow-scrolling: touch;
+}
+
 
 @media (max-width: 600px) {
   /* Styles specific to small screens go here */
@@ -114,7 +126,5 @@ a:hover {
   padding-left: 0px;
 }
 
-
-   
   
 }
