@@ -27,4 +27,9 @@ h1 {
 h4{
     color: orangered;
 }
+
+.quick-links{
+    cursor: pointer;
+     color:blue
+}
   
