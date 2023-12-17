@@ -52,5 +52,9 @@ p{
     /* Styles specific to small screens go here */
      .col-3{
       width: 74%;
+      margin-right: 0px;
+     }
+     .event-content{
+        margin-top: 39% !important; 
      }
   }
