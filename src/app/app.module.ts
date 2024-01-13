@@ -33,6 +33,7 @@ import { EventComponent } from './event/event.component';
 import { AboutComponent } from './about/about.component';
 import { MouseHoverEffect } from './customDirective/mouseHoverEffect.directive';
 import { EventDetailComponent } from './event-detail/event-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
     MatRadioModule,
     MatCheckboxModule,
     MatDialogModule,
+    HttpClientModule,
     BrowserAnimationsModule
   ],
   providers: [],
