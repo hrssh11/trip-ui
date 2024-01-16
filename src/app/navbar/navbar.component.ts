@@ -1,7 +1,6 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { CommonserviceService } from '../home/commonService/commonservice.service';
-import { Router } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -15,12 +14,21 @@ export class NavbarComponent implements OnInit {
   isContact: boolean = false;
   isLogin: boolean = false;
   isEventDetail: boolean = false;
+  hideFooter: boolean = false;
 
   constructor(
     public commonService: CommonserviceService,
     private router: Router,
-    private route: ActivatedRoute ,) {
-
+    ) {
+      this.router.events.subscribe((events:any)=>{
+        if(events instanceof NavigationEnd){
+          if(events.url == '/login'){
+            this.hideFooter = true;
+          }else{
+            this.hideFooter = false;
+          }
+        }
+      })  
   }
 
   ngOnInit() {

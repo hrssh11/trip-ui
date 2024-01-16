@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from '../servicess/userService/user.service';
 
 @Component({
@@ -6,13 +6,23 @@ import { UserService } from '../servicess/userService/user.service';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
-
-  constructor(private userService : UserService){}
+export class ContactComponent implements OnInit {
+ 
+  constructor(private userService : UserService){
+  }
+  
+  ngOnInit(): void {
+  }
 
   getAllEmpolyee(){
     this.userService.getAllemployee().subscribe(res=>{
       console.log(res);
     })
   }
+
+   name(params:string) {
+  
+  }
+
+
 }

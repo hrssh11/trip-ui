@@ -1,0 +1,39 @@
+.split-div {
+    width: 100%;
+    background: linear-gradient(to right, #c5dbf4 50%, #1d1e6b 50%);
+    position: fixed;
+    height: 100vh;
+  }
+  
+  .split-login {
+    width: 100%;
+    height: 78vh;
+    background: linear-gradient(to right, white  50%, #dde9f5 50%);
+    border-radius: 12px
+  }
+
+  .container-fluid{
+    padding: 34px;
+  }
+
+  .logo{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+ 
+ .login-form{
+  /* display: flex; */
+  width: 600px !important ;
+  display: flex;
+  justify-content: center;
+ }
+
+ .form-control {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  background-color: var(--bs-body-bg);
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+}
