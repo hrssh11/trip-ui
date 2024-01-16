@@ -34,6 +34,7 @@ import { AboutComponent } from './about/about.component';
 import { MouseHoverEffect } from './customDirective/mouseHoverEffect.directive';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatCheckboxModule,
     MatDialogModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

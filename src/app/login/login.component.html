@@ -11,18 +11,21 @@
                   <h1 class="welcome">Welcome Back</h1>
                </div>
                <div class="login-form">
-                  <form>
-                     <div class="form-group">
-                       <label for="exampleInputEmail1">Email address</label>
-                       <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email">
-                       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                     </div>
-                     <div class="form-group">
-                       <label for="exampleInputPassword1">Password</label>
-                       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                     </div>
-                   </form>
-               </div>
+                  <form [formGroup]="signupForm" (ngSubmit)="onLogin()">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                    </div>
+                    <div class="loginbtn">
+                      <button [disabled]="!signupForm.valid" class="button-login" type="submit">Login</button>
+                    </div>
+                  </form>
+                </div>
            
             </div>
             <div class="col-6">

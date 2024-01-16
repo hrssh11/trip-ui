@@ -37,3 +37,24 @@
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
 }
+
+.loginbtn{
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+
+.button-login{
+  width: 38%;
+  padding: 9px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  border: 0px;
+  background-color: #1d1e6b;
+  color: white;
+}
+button[disabled=disabled], button:disabled {
+  background-color: #e9e9f5;
+  color: grey;
+}
