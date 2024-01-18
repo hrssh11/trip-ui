@@ -13,15 +13,16 @@ export class LoginComponent implements OnInit {
   constructor(private userService : UserService , private fb: FormBuilder){}
   ngOnInit(): void {
     this.signupForm = this.fb.group({
-      email: ['',[ Validators.required, Validators.email]],
-      password:['' , [Validators.required ,  Validators.minLength(8), Validators.maxLength(20)]]
+      username: ['',[ Validators.required, Validators.email]],
+      password:['' , [Validators.required ,  Validators.minLength(4)]]
     });
   }
 
   onLogin(){
     if(this.signupForm.valid){
-      console.log(this.signupForm.value)
+      this.userService.onLogin(this.signupForm.value).subscribe(res=>{
+        console.log('res' , res);
+      })
     }
-
   }
 }
