@@ -1,5 +1,42 @@
 <div class="main-container">
-  <mat-sidenav-container class="sidenav-container">
+  <mat-toolbar class="bg-home" *ngIf="isHome">
+    <mat-toolbar-row>
+      <h1 class="heading">WayJoy</h1>
+      <div class="head">
+         <a routerLink="/" (click)="isEventClick('home')" value="home"><mat-icon>home</mat-icon> Home</a>
+         <a routerLink="/event" (click)="isEventClick('event')" value="event"><mat-icon>landscape</mat-icon> Event</a>
+         <a routerLink="/contact" (click)="isEventClick('contact')" value="contact"><mat-icon>phone</mat-icon> Contact</a>
+        <a routerLink="/login" (click)="isEventClick('login')" value="login"><mat-icon>person</mat-icon> Login</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-toolbar class="bg-event" *ngIf="isEvent">
+    <mat-toolbar-row>
+      <h1 class="heading">WayJoy</h1>
+      <div class="head">
+        <a routerLink="/" (click)="isEventClick('home')" value="home"><mat-icon>home</mat-icon> Home</a>
+        <a routerLink="/event" (click)="isEventClick('event')" value="event"><mat-icon>landscape</mat-icon> Event</a>
+        <a routerLink="/contact" (click)="isEventClick('contact')" value="contact"><mat-icon>phone</mat-icon> Contact</a>
+        <a routerLink="/login" (click)="isEventClick('login')" value="login"><mat-icon>person</mat-icon> Login</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-toolbar class="bg-contact" *ngIf="isContact">
+    <mat-toolbar-row>
+      <h1 class="heading">WayJoy</h1>
+      <div class="head">
+        <a routerLink="/" (click)="isEventClick('home')" value="home"><mat-icon>home</mat-icon> Home</a>
+        <a routerLink="/event" (click)="isEventClick('event')" value="event"><mat-icon>landscape</mat-icon> Event</a>
+        <a routerLink="/contact" (click)="isEventClick('contact')" value="contact"><mat-icon>phone</mat-icon> Contact</a>
+        <a routerLink="/login" (click)="isEventClick('login')" value="login"><mat-icon>person</mat-icon> Login</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+</div>
+  <!-- <mat-sidenav-container class="sidenav-container">
     <mat-sidenav   #sidenav mode="over" class="sidenav" position="end">
       <div class="sidenav-header">
         <button mat-icon-button (click)="sidenav.toggle()">
@@ -54,11 +91,11 @@
         </mat-toolbar-row>
       </mat-toolbar>
 
-      <div>
-        <router-outlet></router-outlet>
-        <app-footer *ngIf="!hideFooter"></app-footer>
-      </div>
-
+      
     </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
+  </mat-sidenav-container> -->
+  <div>
+    <router-outlet *ngIf="!isHome"></router-outlet>
+    <app-home *ngIf="isHome"></app-home>
+    <app-footer></app-footer>
+  </div>

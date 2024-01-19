@@ -1,20 +1,38 @@
 .bg-home {
   width: 100%;
-  height: 40%;
+  height: 60%;
   background: url('https://plus.unsplash.com/premium_photo-1661902184762-49c2c8ebb787?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2016&q=80') no-repeat center;
   background-size: 100% 100%;
   background-position: top center;
   background-repeat: no-repeat;
 }
+
 .bg-event {
   width: 100% !important;
   height: 15% !important;
   /* background-image: url('../../assets/images/event.png'); */
   background-color: rebeccapurple;
   background-size: 100% 100%;
-  background-position: center top; 
+  background-position: center top;
   background-repeat: no-repeat;
 }
+
+.head {
+  display: flex;
+  padding-top: 55px;
+  padding-left: 30%;
+}
+
+.head a {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  padding-left: 90px;
+}
+
+.head a:hover {
+      text-decoration: underline;
+    }
 
 
 .bg-contact {
@@ -23,7 +41,7 @@
   /* background-image: url('../../assets/images/event.png'); */
   background-color: rebeccapurple;
   background-size: 100% 100%;
-  background-position: center top; 
+  background-position: center top;
   background-repeat: no-repeat;
 }
 
@@ -48,14 +66,13 @@ h1 {
   /* Align content to the right */
 }
 
-.sidenav-container {
+/* .sidenav-container {
   flex: 1;
-}
+} */
 
-.sidenav {
+/* .sidenav {
   width: 250px;
   background-color: white;
-  /* background: url('https://w0.peakpx.com/wallpaper/175/701/HD-wallpaper-dark-mountain.jpg') no-repeat center; */
   color: rebeccapurple;
   padding: 20px;
   top: 15%;
@@ -63,43 +80,40 @@ h1 {
   right: 2%;
   border-radius: 17px !important;
   background: honeydew;
-}
+}  */
 
 /* Style your sidebar items as needed */
-ul {
+/* ul {
   list-style: none;
   padding: 0;
 }
 
 li {
-  /* margin-bottom: 30px; */
   display: block;
   padding-top: 30px;
   padding-left: 30px;
-}
+} */
 
-a {
+/* a {
   text-decoration: none;
   font-size: large;
   color: rebeccapurple;
-}
+} */
 
-a:hover {
-  text-decoration: underline;
-}
 
-.mat-icon{
+
+.mat-icon {
   padding-top: 2px;
   padding-right: 30px;
 }
 
-.sidenav-header {
+/* .sidenav-header {
   display: flex;
   justify-content: end;
   color: gray;
-}
+} */
 
- :host ::ng-deep  .mat-drawer-inner-container {
+:host ::ng-deep .mat-drawer-inner-container {
 
   height: 100%;
   overflow: visible;
@@ -108,6 +122,7 @@ a:hover {
 
 
 @media (max-width: 600px) {
+
   /* Styles specific to small screens go here */
   .heading {
     /* Your responsive styles for small screens */
@@ -115,16 +130,16 @@ a:hover {
     position: absolute;
     left: -105px;
     top: 2px;
-}
+  }
 
-.menu-button-res{
-  position: absolute; 
-  right: 11%;
-}
+  .menu-button-res {
+    position: absolute;
+    right: 11%;
+  }
 
-.custom-button{
-  padding-left: 0px;
-}
+  .custom-button {
+    padding-left: 0px;
+  }
 
-  
+
 }

@@ -1,24 +1,110 @@
-.home-content{
-    height: 600px;
-    width: 100%;
-    background: #fff;
-    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
-    margin-top: 16px;
-    margin-bottom: 37px;
-    border-radius: 31px;
+.most-search,
+.review{
+    color: darkred;
+        text-decoration: underline;
+        margin-left: 75px;
+        margin-top: 30px;
 }
 
-.recent-search{
-    padding-top: 17px;
+.slider{
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slider-track{
     display: flex;
-    justify-content: center;
+    width: calc(250px * 18);
+    animation: scroll 40% linear infinite;
 }
 
-.trending-plan{
-    font-weight: 100;
-    border-radius: 1px 53px 9px 35px;
-    padding: 17px;
-    background: #23a7a2;;
-    color: white;
-    font-weight: 100;
+.slider-track:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 9));
+    }
+}
+
+.slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+.img{
+    width:100%;
+    transition: transform 1px;
+}
+
+img :hover{
+    transform: translateZ(20px);
+}
+
+.slider::before,
+.slider::after{
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%
+    rgba(255,255,255,0) 100%);
+    content: '';
+    height: 100px;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.slider::before{
+    left: 0;
+    top: 0;
+}
+
+.slider::after{
+    right: 0;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+.review-content{
+    display: flex;
+    padding-left: 60px;
+}
+
+.star-container {
+    font-size: 24px;
+    color: rgb(244, 244, 73);
+}
+
+.star {
+    display: inline-block;
+}
+
+.star-empty::before {
+    content: '\2606';
+}
+
+.star-filled::before {
+    content: '\2605';
+}
+
+.rev{
+        padding-left: 22px;
+            padding-right: 20px;
+}
+
+h3{
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
 }
