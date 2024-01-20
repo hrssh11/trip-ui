@@ -1,6 +1,6 @@
 <div class="main-container">
   <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav   #sidenav mode="over" class="sidenav" position="end">
+    <mat-sidenav #sidenav mode="over" class="sidenav" position="end">
       <div class="sidenav-header">
         <button mat-icon-button (click)="sidenav.toggle()">
           <mat-icon>close</mat-icon>
@@ -8,9 +8,12 @@
       </div>
       <ul>
         <li><a routerLink="/" (click)="isEventClick('home')" value="home"><mat-icon>home</mat-icon> Home</a></li>
-        <li><a routerLink="/event" (click)="isEventClick('event')" value="event"><mat-icon>landscape</mat-icon> Event</a></li>
-        <li><a routerLink="/contact" (click)="isEventClick('contact')" value="contact"><mat-icon>phone</mat-icon> Contact</a></li>
-        <li><a routerLink="/login" (click)="isEventClick('login')" value="login"><mat-icon>person</mat-icon> Login</a></li>
+        <li><a routerLink="/event" (click)="isEventClick('event')" value="event"><mat-icon>landscape</mat-icon>
+            Event</a></li>
+        <li><a routerLink="/contact" (click)="isEventClick('contact')" value="contact"><mat-icon>phone</mat-icon>
+            Contact</a></li>
+        <li><a routerLink="/login" (click)="isEventClick('login')" value="login"><mat-icon>person</mat-icon> Login</a>
+        </li>
       </ul>
       <br><br><br><br><br><br><br><br>
       <hr>
@@ -21,38 +24,18 @@
     </mat-sidenav>
 
     <mat-sidenav-content class="content">
-      <mat-toolbar class="bg-home" *ngIf="isHome">
+      <mat-toolbar>
         <mat-toolbar-row>
-          <h1 class="heading">WayJoy</h1>
-          <div class="custom-button">
-            <button class="menu-button-res" mat-icon-button (click)="sidenav.toggle()">
+          <h1 class="">WayJoy</h1>
+          <div class="">
+            <button class="" mat-icon-button (click)="sidenav.toggle()">
               <mat-icon style="color: aliceblue;">menu</mat-icon>
             </button>
           </div>
         </mat-toolbar-row>
+        harsh
       </mat-toolbar>
 
-      <mat-toolbar style="position: fixed;top: 0;" class="bg-event" *ngIf="isEvent">
-        <mat-toolbar-row>
-          <h1 class="heading">WayJoy</h1>
-          <div class="custom-button">
-            <button class="menu-button-res" mat-icon-button (click)="sidenav.toggle()">
-              <mat-icon style="color: aliceblue;">menu</mat-icon>
-            </button>
-          </div>
-        </mat-toolbar-row>
-      </mat-toolbar>
-
-      <mat-toolbar class="bg-contact" *ngIf="isContact">
-        <mat-toolbar-row>
-          <h1 class="heading">WayJoy</h1>
-          <div class="custom-button">
-            <button class="menu-button-res" mat-icon-button (click)="sidenav.toggle()">
-              <mat-icon style="color: aliceblue;">menu</mat-icon>
-            </button>
-          </div>
-        </mat-toolbar-row>
-      </mat-toolbar>
 
       <div>
         <router-outlet></router-outlet>

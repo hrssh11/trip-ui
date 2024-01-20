@@ -28,7 +28,6 @@ p{
     color: black;
 }
 .event-content{
-    margin-top: 12% !important; 
     height: 700px;
     overflow: auto;
     background: #fff;
@@ -55,6 +54,6 @@ p{
       margin-right: 0px;
      }
      .event-content{
-        margin-top: 25% !important; 
+        margin-top: 25% !important;
      }
   }

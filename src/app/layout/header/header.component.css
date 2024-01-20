@@ -1,0 +1,35 @@
+nav {
+  text-align: center;
+  display: flex;
+    justify-content: center; /* Align items to the right end */
+}
+
+ul {
+
+  list-style: none;
+}
+
+li{
+  display: inline-block;
+  margin-right: 75px;
+  color: #a2a6b4;
+}
+.li-items{
+  margin: auto;
+  padding-top: 16px;
+}
+a{
+  cursor: pointer;
+}
+
+.login-btn{
+  padding: 9px;
+  max-width: 153px;
+  min-width: 101px;
+  border-radius: 5px;
+  background-color: #1d1e6b;
+  color: white;
+  text-transform: uppercase;
+  filter: drop-shadow(0px 1px 1px #1d1e6b);
+  border: 0px;
+}

@@ -35,7 +35,9 @@ import { MouseHoverEffect } from './customDirective/mouseHoverEffect.directive';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { HeaderComponent } from './layout/header/header.component';
+import { WrapperComponent } from './layout/wrapper/wrapper.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EventComponent,
     AboutComponent,
     MouseHoverEffect,
-    EventDetailComponent
+    EventDetailComponent,
+    HeaderComponent,
+    WrapperComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
