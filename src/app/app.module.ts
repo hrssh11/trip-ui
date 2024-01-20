@@ -38,6 +38,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './layout/header/header.component';
 import { WrapperComponent } from './layout/wrapper/wrapper.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { VideoStateService } from './servicess/videostate.service';
 @NgModule({
   declarations: [
     AppComponent,
