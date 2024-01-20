@@ -166,7 +166,22 @@ width: 100vw;
   animation-delay: 1.4s;
 }
 
-/* .word span:nth-child(6){
-  animation-delay: 2.8s;
-} */
+.background-image {
+  background-image: url('../../assets/images/plane.png');
+  background-size: contain;
+  background-position: center;
+  height: 500px;
+  border-radius: 23px;
+}
 
+.desnationbox {
+  height: 200px;
+  width: 30em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: -19px;
+  border-radius: 9px;
+}
+
+.container{
+  margin-top: 100px;
+}
