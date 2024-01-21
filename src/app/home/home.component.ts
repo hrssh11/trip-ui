@@ -8,6 +8,15 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   categories: any[] = [
+
+    {
+      category: 'cruises',
+      src: 'assets/images/cruises.jpeg',
+      title: 'Cruises Trip'
+    },
+
+
+
     {
       category: 'family',
       src: 'assets/images/familytrip.jpeg',
@@ -28,15 +37,16 @@ export class HomeComponent implements OnInit {
       src: 'assets/images/roadtrip.jpeg',
       title: 'Road Trip'
     },
-    {
-      category: 'cruises',
-      src: 'assets/images/cruises.jpeg',
-      title: 'Cruises Trip'
-    },
+
     {
       category: 'cultural',
       src: 'assets/images/culturaltrip.jpeg',
       title: 'Cultural Trip'
+    },
+    {
+      category: 'solo',
+      src: 'assets/images/solotrip.jpeg',
+      title: ''
     },
 
   ]
