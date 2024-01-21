@@ -15,13 +15,13 @@
 <div class="container">
   <div class="row">
     <div class="col-6 background-image">
-
       <div>
         <label style="font-size: 30px;font-weight: 700;">Upcoming Tours</label>
-         <p style="width: 56%;margin-top: 26px; color: #b6b6b8;">
+        <p style="width: 56%;margin-top: 26px; color: #b6b6b8;">
           Get ready for exciting travels! Check out our upcoming trips and get set for an amazing adventure.
-         </p>
+        </p>
       </div>
+
 
       <div class="search-input">
         <input placeholder="Search Destination" type="text">
@@ -32,9 +32,15 @@
 
     </div>
     <div class="col-6">
-     <div>
-
-     </div>
+      <label style="font-size: 30px;font-weight: 200; margin-bottom: 32px; color:  #a2a6b4;">Categories <mat-icon style="padding-top: 3px;">category</mat-icon></label>
+      <div class="wrapper">
+        <div *ngFor="let cat of categories " class="card1">
+          <img [src]="cat.src" alt="">
+          <div class="info">
+            <h1> {{cat.title}}</h1>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

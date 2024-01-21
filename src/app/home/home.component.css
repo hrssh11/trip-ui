@@ -1,9 +1,9 @@
-.video-container{
-position: relative;
-width: 100vw;
+.video-container {
+  position: relative;
+  width: 100vw;
 }
 
-#bg-video{
+#bg-video {
   width: 100vw;
   height: 60vh;
   object-fit: cover;
@@ -11,19 +11,19 @@ width: 100vw;
   border-radius: 1px 156px;
 }
 
-.word{
+.word {
   width: 90%;
   position: absolute;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   text-align: center;
 }
 
-.word span{
+.word span {
   display: inline-block;
   font-size: 6vw;
-  font-family: "Poppins" , sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: 3vw;
@@ -33,48 +33,46 @@ width: 100vw;
   animation: fall 3.5s forwards;
 }
 
-
 @keyframes fall {
-  100%{
+  100% {
     transform: translateY(0);
   }
 }
-.word span:nth-child(2){
+.word span:nth-child(2) {
   animation-delay: 0.7s;
 }
 
-.word span:nth-child(3){
+.word span:nth-child(3) {
   animation-delay: 1.4s;
 }
 
-.word span:nth-child(4){
+.word span:nth-child(4) {
   animation-delay: 2.1s;
 }
 
-.word span:nth-child(5){
+.word span:nth-child(5) {
   animation-delay: 1.4s;
 }
 
 .background-image {
-  background-image: url('../../assets/images/plane.png');
+  background-image: url("../../assets/images/plane.png");
   background-size: contain;
   background-position: center;
   height: 500px;
   border-radius: 23px;
 }
 
-.container{
+.container {
   margin-top: 100px;
 }
 
-.search-input{
+.search-input {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 50%;
   padding: 14px;
 }
 
-
-.search-input input{
+.search-input input {
   width: 86%;
   border: 0px;
 }
@@ -83,9 +81,52 @@ input:focus {
   outline: none;
 }
 
-  .search-input button {
-     border: 0px;
-    border-radius: 5px;
-    background: #1d1e6b;
-    color: white;
- }
+.search-input button {
+  border: 0px;
+  border-radius: 5px;
+  background: #1d1e6b;
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  overflow: scroll;
+  padding-bottom: 25px;
+}
+
+.card1 {
+  /* width: 5%; */
+  margin-right: -61px;
+  /* height: 200px; */
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 7px 10pxrgba (0, 0, 0, 0, 0.5);
+  transition: 0.5s ease-in-out;
+}
+
+.card1:hover {
+  transform: translateY(20px);
+}
+
+.card1 img {
+  width: 260px;
+  height: 300px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.card1 .info {
+  color: #fff;
+  opacity: 1;
+  transform: translate(-210px , 10px );
+  transition: 0.5s all;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.card1:hover .info {
+  opacity: 1;
+  transition: 0.5s all;
+}

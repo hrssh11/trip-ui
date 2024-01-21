@@ -12,3 +12,13 @@ body {
 body::-webkit-scrollbar {
  display: none;
 }
+ /* -webkit-scrollbar{
+
+ } */
+
+ div::-webkit-scrollbar{
+  display: none;
+ }
+
+
+ /* color: #a2a6b4; */
