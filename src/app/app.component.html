@@ -1,7 +1,5 @@
-<!-- <app-navbar></app-navbar> -->
-
 <app-wrapper>
-  <ng-container slot="header">
+  <ng-container *ngIf="!isLoginRoute" slot="header">
     <app-header></app-header>
   </ng-container>
   <ng-container slot="central">
