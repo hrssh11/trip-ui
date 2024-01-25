@@ -9,20 +9,37 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  signupForm:FormGroup;
-  constructor(private userService : UserService , private fb: FormBuilder){}
+  signupForm: FormGroup;
+  title: string = 'Sign In'
+  isLogin :boolean=false;
+  constructor(private userService: UserService, private fb: FormBuilder) { }
   ngOnInit(): void {
     this.signupForm = this.fb.group({
-      username: ['',[ Validators.required, Validators.email]],
-      password:['' , [Validators.required ,  Validators.minLength(4)]]
+      username: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(4)]]
     });
   }
 
-  onLogin(){
-    if(this.signupForm.valid){
-      this.userService.onLogin(this.signupForm.value).subscribe(res=>{
-        console.log('res' , res);
+  onLogin() {
+    if (this.signupForm.valid) {
+      this.userService.onLogin(this.signupForm.value).subscribe(res => {
+        console.log('res', res);
       })
     }
   }
+
+  onMybizRegister(titleValue) {
+    this.title = titleValue;
+    this.isLogin = true;
+  }
+  onUserRegister(titleValue) {
+    this.title = titleValue;
+  }
+
+  backToLogin(titleValue) {
+    this.title = titleValue;
+    this.isLogin = false;
+  }
+
+
 }
