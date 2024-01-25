@@ -34,12 +34,11 @@ export class LoginComponent implements OnInit {
   }
   onUserRegister(titleValue) {
     this.title = titleValue;
+    this.isLogin = true;
   }
 
   backToLogin(titleValue) {
     this.title = titleValue;
     this.isLogin = false;
   }
-
-
 }
