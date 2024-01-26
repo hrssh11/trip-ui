@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../servicess/userService/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   isLogin: boolean = false;
   isMybizz: boolean = false;
   isSinup: boolean = false;
-  constructor(private userService: UserService, private fb: FormBuilder) { }
+  constructor(private userService: UserService, private fb: FormBuilder , private toastr: ToastrService) { }
   ngOnInit(): void {
     this.signupForm = this.fb.group({
       username: ['', [Validators.required, Validators.email]],
@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
     this.isSinup = true;
   }
   backToLogin(titleValue: string) {
+    this.toastr.success('Hello world!', 'Toastr fun!');
     this.title = titleValue;
     this.isLogin = false;
     this.isMybizz= false;

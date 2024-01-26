@@ -22,3 +22,19 @@ body::-webkit-scrollbar {
 
 
  /* color: #a2a6b4; */
+
+ .custom-toast-class {
+  background-color: #3700ff; /* Set your desired background color for success */
+  color: #fff; /* Set your desired text color */
+  /* Add any other custom styles you need */
+}
+
+
+.toast-success {
+  background-color: #1e1e6b !important;
+
+}
+
+.toast-container .ngx-toastr {
+  box-shadow: 0 0 16px #000000 !important;
+}

@@ -1,6 +1,5 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { CommonserviceService } from '../home/commonService/commonservice.service';
 
 @Component({
   selector: 'app-navbar',
@@ -17,7 +16,6 @@ export class NavbarComponent implements OnInit {
   hideFooter: boolean = false;
 
   constructor(
-    public commonService: CommonserviceService,
     private router: Router,
     ) {
       this.router.events.subscribe((events:any)=>{
