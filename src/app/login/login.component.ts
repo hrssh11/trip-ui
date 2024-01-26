@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit {
   isLogin: boolean = false;
   isMybizz: boolean = false;
   isSinup: boolean = false;
-  isProc
   constructor(private userService: UserService, private fb: FormBuilder , private toastr: ToastrService) { }
   ngOnInit(): void {
     this.signupForm = this.fb.group({
@@ -43,7 +42,7 @@ export class LoginComponent implements OnInit {
     this.isSinup = true;
   }
   backToLogin(titleValue: string) {
-    // this.toastr.success('Hello world!', 'Toastr fun!');
+
     this.title = titleValue;
     this.isLogin = false;
     this.isMybizz= false;
@@ -53,13 +52,22 @@ export class LoginComponent implements OnInit {
   onLogin() {
     if (this.signupForm.valid) {
       this.userService.onLogin(this.signupForm.value).subscribe(res => {
+        this.signupForm.reset();
+        this.toastr.success('Login Successfully');
         console.log('res', res);
-      })
+      },error=>{
+        this.toastr.error(error.error.errors[0].message);
+    })
     }
   }
  onVendorRegistor(){
     if(this.vendorRegistorForm.valid){
-   console.log(this.vendorRegistorForm)
+    this.userService.onVendorRegistor(this.vendorRegistorForm.value).subscribe((res:any)=>{
+      this.vendorRegistorForm.reset();
+      this.toastr.success('Registor Successfully ');
+    },error=>{
+        this.toastr.error(error.error.errors[0].message);
+    })
     }
  }
 }
