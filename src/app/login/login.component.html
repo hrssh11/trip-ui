@@ -29,9 +29,9 @@
             </ng-container>
 
             <ng-container *ngIf="isMybizz">
-              <form >
+              <form [formGroup]="vendorRegistorForm" (ngSubmit)="onVendorRegistor()">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">First Name</label>
+                  <label for="exampleInputEmail1">First Name </label>
                   <input type="text" class="form-control" formControlName="firstname" placeholder="First Name">
                 </div>
                 <div class="form-group">
@@ -43,10 +43,10 @@
                   <label for="exampleInputEmail1">Business Name</label>
                   <input type="text" class="form-control" formControlName="businessName" placeholder="Business Name">
                 </div>
-
                 <div class="form-group">
                   <label for="exampleInputEmail1">Number</label>
-                  <input type="number" class="form-control" formControlName="number" placeholder="Number">
+                  <input type="text" class="form-control" formControlName="phoneNo" placeholder="Number">
+                  <small *ngIf="vendorRegistorForm.get('phoneNo').hasError('maxlength') || vendorRegistorForm.get('phoneNo').hasError('pattern')" class="text-danger">Please enter a valid number</small>
                 </div>
 
                 <div class="form-group">
@@ -59,9 +59,10 @@
                 <div class="form-group">
                   <label for="exampleInputEmail1">Password</label>
                   <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                  <small id="emailHelp" class="form-text text-muted">Password length should be more than 4 .</small>
                 </div>
                 <div class="loginbtn">
-                  <button [disabled]="false" class="button-login" type="submit">Proceed</button>
+                  <button [disabled]="!vendorRegistorForm.valid" class="button-login" type="submit">Proceed</button>
                 </div>
               </form>
             </ng-container>
