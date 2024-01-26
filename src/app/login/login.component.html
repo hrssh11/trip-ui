@@ -1,5 +1,5 @@
 <div class="split-div">
-  <div style="padding-top:110px " class="container">
+  <div style="padding-top:54px " class="container">
     <div class="split-login">
       <div class="row">
         <div class="col">
@@ -28,6 +28,61 @@
               </form>
             </ng-container>
 
+            <ng-container *ngIf="isMybizz">
+              <form >
+                <div class="form-group">
+                  <label for="exampleInputEmail1">First Name</label>
+                  <input type="text" class="form-control" formControlName="firstname" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Last Name</label>
+                  <input type="text" class="form-control" formControlName="lastname" placeholder="Last Name">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Business Name</label>
+                  <input type="text" class="form-control" formControlName="businessName" placeholder="Business Name">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Number</label>
+                  <input type="number" class="form-control" formControlName="number" placeholder="Number">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="form-control" formControlName="email" placeholder="Email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Password</label>
+                  <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                </div>
+                <div class="loginbtn">
+                  <button [disabled]="false" class="button-login" type="submit">Proceed</button>
+                </div>
+              </form>
+            </ng-container>
+
+            <!-- <ng-container *ngIf="isSinup">
+              <form [formGroup]="signupForm" (ngSubmit)="onLogin()">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" formControlName="username" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                </div>
+                <div class="loginbtn">
+                  <button [disabled]="!signupForm.valid" class="button-login" type="submit">Login</button>
+                </div>
+              </form>
+             </ng-container> -->
           </div>
           <div class="registerbtn-div">
             <button *ngIf="!isLogin" (click)="onMybizRegister('Sign up MyBiz')" style="margin-right: 20px;"

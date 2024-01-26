@@ -59,7 +59,7 @@ button[disabled=disabled], button:disabled {
 }
 
 .col{
-  height: 700px;
+  height: 750px;
 }
 
 .registerbtn-div{
@@ -81,3 +81,7 @@ button[disabled=disabled], button:disabled {
   margin-top: -15px;
 }
 
+label{
+margin-top: 6px;
+margin-bottom: 6px;
+}

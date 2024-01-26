@@ -11,7 +11,9 @@ export class LoginComponent implements OnInit {
 
   signupForm: FormGroup;
   title: string = 'Sign In'
-  isLogin :boolean=false;
+  isLogin: boolean = false;
+  isMybizz: boolean = false;
+  isSinup: boolean = false;
   constructor(private userService: UserService, private fb: FormBuilder) { }
   ngOnInit(): void {
     this.signupForm = this.fb.group({
@@ -27,18 +29,20 @@ export class LoginComponent implements OnInit {
       })
     }
   }
-
-  onMybizRegister(titleValue) {
+  onMybizRegister(titleValue: string) {
     this.title = titleValue;
     this.isLogin = true;
+    this.isMybizz = true
   }
-  onUserRegister(titleValue) {
-    this.title = titleValue;
+  onUserRegister(titleValue: string) {
+    this.title   = titleValue;
     this.isLogin = true;
+    this.isSinup = true;
   }
-
-  backToLogin(titleValue) {
+  backToLogin(titleValue: string) {
     this.title = titleValue;
     this.isLogin = false;
+    this.isMybizz= false;
+    this.isSinup = false;
   }
 }
