@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css'],
 })
-export class AppComponent {
-  title = 'trip-ui';
-
+export class HeaderComponent {
   isLoginRoute:boolean
   constructor(
     private router: Router,
@@ -23,4 +21,5 @@ export class AppComponent {
         }
       })
   }
+
 }

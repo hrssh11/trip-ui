@@ -1,0 +1,24 @@
+:host {
+  min-height: 100%;
+}
+
+.app-wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: max-content auto;
+  grid-template-areas:
+    'header header'
+    'sidebar main';
+
+  &__header-container {
+    grid-area: header;
+  }
+  &__sidebar-container {
+    grid-area: sidebar;
+  }
+  &__content-container {
+    grid-area: main;
+    position: relative;
+  }
+}

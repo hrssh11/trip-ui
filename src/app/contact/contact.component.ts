@@ -14,11 +14,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getAllEmpolyee(){
-    this.userService.getAllemployee().subscribe(res=>{
-      console.log(res);
-    })
-  }
+ 
 
    name(params:string) {
   

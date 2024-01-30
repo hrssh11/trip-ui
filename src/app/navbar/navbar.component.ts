@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
-import { CommonserviceService } from '../home/commonService/commonservice.service';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -17,7 +16,6 @@ export class NavbarComponent implements OnInit {
   hideFooter: boolean = false;
 
   constructor(
-    public commonService: CommonserviceService,
     private router: Router,
     ) {
       this.router.events.subscribe((events:any)=>{
@@ -28,7 +26,7 @@ export class NavbarComponent implements OnInit {
             this.hideFooter = false;
           }
         }
-      })  
+      })
   }
 
   ngOnInit() {
@@ -36,43 +34,43 @@ export class NavbarComponent implements OnInit {
     this.isEventClick(currentpath)
   }
   isEventClick(event) {
-    switch (event) {
-      case 'home':
-        this.isHome = true;
-        this.isContact = false;
-        this.isLogin = false;
-        this.isEvent = false;
-        this.isEventDetail = false;
-        break;
-      case 'event':
-        this.isEvent = true;
-        this.isHome = false;
-        this.isContact = false;
-        this.isLogin = false;
-        this.isEventDetail = false;
-        break;
-      case 'event-detail':
-        this.isEventDetail = true;
-        this.isEvent = true;
-        this.isHome = false;
-        this.isContact = false;
-        this.isLogin = false;
-        break;
-      case 'contact':
-        this.isContact = true;
-        this.isHome = false;
-        this.isEvent = false;
-        this.isLogin = false;
-        this.isEventDetail = false;
-        break;
-      case 'login':
-        this.isLogin = true;
-        this.isHome = false;
-        this.isEvent = false;
-        this.isContact = false;
-        this.isEventDetail = false;
-        break;
-    }
+    // switch (event) {
+    //   case 'home':
+    //     this.isHome = true;
+    //     this.isContact = false;
+    //     this.isLogin = false;
+    //     this.isEvent = false;
+    //     this.isEventDetail = false;
+    //     break;
+    //   case 'event':
+    //     this.isEvent = true;
+    //     this.isHome = false;
+    //     this.isContact = false;
+    //     this.isLogin = false;
+    //     this.isEventDetail = false;
+    //     break;
+    //   case 'event-detail':
+    //     this.isEventDetail = true;
+    //     this.isEvent = true;
+    //     this.isHome = false;
+    //     this.isContact = false;
+    //     this.isLogin = false;
+    //     break;
+    //   case 'contact':
+    //     this.isContact = true;
+    //     this.isHome = false;
+    //     this.isEvent = false;
+    //     this.isLogin = false;
+    //     this.isEventDetail = false;
+    //     break;
+    //   case 'login':
+    //     this.isLogin = true;
+    //     this.isHome = false;
+    //     this.isEvent = false;
+    //     this.isContact = false;
+    //     this.isEventDetail = false;
+    //     break;
+    // }
 
   }
 }

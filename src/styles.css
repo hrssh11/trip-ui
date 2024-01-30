@@ -1,4 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding-top: 80px; /* Adjust this value based on your navbar's height */
+}
+body::-webkit-scrollbar {
+ display: none;
+}
+ /* -webkit-scrollbar{
+
+ } */
+
+ div::-webkit-scrollbar{
+  display: none;
+ }
+
+
+ /* color: #a2a6b4; */
+
+ .custom-toast-class {
+  background-color: #3700ff; /* Set your desired background color for success */
+  color: #fff; /* Set your desired text color */
+  /* Add any other custom styles you need */
+}
+
+
+.toast-success {
+  background-color: #1e1e6b !important;
+
+}
+
+.toast-container .ngx-toastr {
+  box-shadow: 0 0 16px #000000 !important;
+}

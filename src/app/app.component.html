@@ -1,1 +1,8 @@
-<app-navbar></app-navbar>
+<app-wrapper>
+  <ng-container *ngIf="!isLoginRoute" slot="header">
+    <app-header></app-header>
+  </ng-container>
+  <ng-container slot="central">
+    <router-outlet></router-outlet>
+  </ng-container>
+</app-wrapper>
